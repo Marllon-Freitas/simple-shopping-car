@@ -1,9 +1,17 @@
-import React from "react";
-import { NavbarWrapper, Logo, Menu, MenuItem, Button } from "./styled";
+import React, { useEffect } from "react";
+import { NavbarWrapper, Logo, Menu, MenuItem } from "./styled";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { getTotals } from "../../features/cartSlice";
 
 function Navbar() {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart, dispatch]);
   return (
     <NavbarWrapper>
       <Logo>Logo</Logo>
@@ -18,7 +26,7 @@ function Navbar() {
       <Link to="/cart">
         <Button>
           <FaShoppingCart />
-          <p>Cart (0)</p>
+          <p>Cart ({cart.cartTotalQuantity})</p>
         </Button>
       </Link>
     </NavbarWrapper>

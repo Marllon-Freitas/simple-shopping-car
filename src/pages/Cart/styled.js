@@ -141,6 +141,10 @@ export const CartItemInfo = styled.div`
       flex-direction: column;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const CartEmpty = styled.div`
@@ -150,6 +154,7 @@ export const CartEmpty = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
+
   h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -218,6 +223,13 @@ export const CartBottom = styled.div`
     & > button {
       width: 100%;
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .cart-bottom-checkout {
+      width: 100%;
     }
   }
 `;

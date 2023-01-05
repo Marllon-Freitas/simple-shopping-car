@@ -19,9 +19,6 @@ function Navbar() {
         <MenuItem>
           <Link to="/">Home</Link>
         </MenuItem>
-        <MenuItem>Products</MenuItem>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Contact</MenuItem>
       </Menu>
       <Link to="/cart">
         <Button>

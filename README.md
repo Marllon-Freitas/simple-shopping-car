@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You can test here(https://simple-shopping-cart-project.netlify.app/)[https://simple-shopping-cart-project.netlify.app/]
+You can test here[https://simple-shopping-cart-project.netlify.app/](https://simple-shopping-cart-project.netlify.app/)
 
 ## Available Scripts
 
